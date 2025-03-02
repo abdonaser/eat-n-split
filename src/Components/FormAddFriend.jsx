@@ -12,8 +12,9 @@ function FormAddFriend({ addNewFriend, showAddFriendFrom }) {
     });
   };
 
-  const handleAddFreind = (e) => {
+  const handleAddFriend = (e) => {
     e.preventDefault();
+    console.log('test');
     if (friendForm.name == '' || friendForm.image == '') return;
 
     const id = uuidv4();
@@ -38,7 +39,7 @@ function FormAddFriend({ addNewFriend, showAddFriendFrom }) {
 
   return (
     <>
-      <form className="form-add-friend" onSubmit={handleAddFreind}>
+      <form className="form-add-friend" onSubmit={handleAddFriend}>
         <label>👬 Friend Name</label>
         <input
           type="text"

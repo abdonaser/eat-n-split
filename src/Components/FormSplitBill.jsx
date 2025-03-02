@@ -22,9 +22,19 @@ function FormSplitBill({ selectedFriend, onSplitBill }) {
     // }
   };
   return (
-    <>
+    <div className="containerSplit">
+      <div className="imageContainer">
+        <img
+          className="imgStyle"
+          src={selectedFriend.image}
+          alt={selectedFriend.name}
+        />
+      </div>
       <form className="form-split-bill" onSubmit={handleSubmit}>
-        <h2>Split Bill With {selectedFriend.name}</h2>
+        <h2>
+          Split Bill With{' '}
+          <span style={{ fontStyle: 'italic' }}>{selectedFriend.name}</span>
+        </h2>
 
         <label>💰 Bill Value</label>
         <input
@@ -61,7 +71,7 @@ function FormSplitBill({ selectedFriend, onSplitBill }) {
 
         <Button>Split Bill</Button>
       </form>
-    </>
+    </div>
   );
 }
 

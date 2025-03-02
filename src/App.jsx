@@ -2,7 +2,7 @@ import { initialFriends } from './assets/Data';
 import './App.css';
 import FriendsList from './Components/FriendsList';
 import FormAddFriend from './Components/FormAddFriend';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Button from './Components/Button';
 import FormSplitBill from './Components/FormSplitBill';
 
@@ -52,7 +52,7 @@ function App() {
           />
           {showAddFriendForm && (
             <FormAddFriend
-              addNewFriend={friends}
+              addNewFriend={setFriends}
               showAddFriendFrom={handleShowAddFriendForm}
             />
           )}
@@ -62,6 +62,7 @@ function App() {
         </div>
         {selectedFriend && (
           <FormSplitBill
+            key={selectedFriend.id}
             selectedFriend={selectedFriend}
             // updatedFriends={updatedFriends}
             onSplitBill={handleSplitBill}

@@ -79,6 +79,18 @@ body {
   grid-row: span 2;
 }
 
+.imageContainer {
+  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.imgStyle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
 .sidebar li h3 {
   grid-row: 1;
   grid-column: 2;
@@ -94,7 +106,7 @@ body {
   grid-column: 3;
 }
 
-.sidebar > .button {
+.sidebar>.button {
   float: right;
   margin-right: 1.2rem;
 }
@@ -122,9 +134,10 @@ form {
   margin-bottom: 1.6rem;
   padding: 1.2rem;
 }
+
 .form-split-bill {
   grid-template-columns: 1fr 12rem;
-  padding: 3.2rem 4rem;
+  padding: 1rem 4rem 3.2rem 4rem;
 }
 
 label {
